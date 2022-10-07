@@ -5,3 +5,9 @@ React is a JavaScript library that can be used in several ways: plug it into an 
 
 + React websites are built using ***components***
 + Single page apps (SPA) are built using React
+
+### What you should Already know
+- JavaScript: Asynchronous API calls
+- HTML and CSS
+
+###
