@@ -43,3 +43,7 @@ import {useState} from 'react'
 + The index.js file is the entry point to the react application, and that runs first. It's this file's Job to take up component and render it to the DOM.
 + Once JSX compiles, we have a JavaScript tree like representation.
 + React uses *Virtual DOM* when updating our template.
+
+### 20. Outputting List
++ You can use a *use State* as many times as you want a react app.
++ A key prop is something React can use to keep track of template items in some kind of Array
