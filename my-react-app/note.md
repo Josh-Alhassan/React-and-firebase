@@ -14,3 +14,9 @@ React is a JavaScript library that can be used in several ways: plug it into an 
 - React uses node.js under the hood to compile our project.
 
 ## React Basics
+
+
+## Intro to State and useState
+### Why we need state!
++ **State** is basically another word for component data that might change over time.
++ When a react app first starts before a component template is even mounted to the DOM, React runs the component function.
