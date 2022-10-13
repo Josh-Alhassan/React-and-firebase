@@ -16,7 +16,7 @@ React is a JavaScript library that can be used in several ways: plug it into an 
 ## React Basics
 
 
-## Intro to State and useState
+## 4. Intro to State and useState
 ### Why we need state!
 + **State** is basically another word for component data that might change over time.
 + When a react app first starts before a component template is even mounted to the DOM, React runs the component function.
@@ -38,3 +38,8 @@ import {useState} from 'react'
 + <code>useState('')</code> function returns Two Values for us inside an array and we can use what is known as *"Destructuring"* to grab the returned values.
 1. The actual state value.
 2. A function to change that state value.
+
+### How state and Rendering work
++ The index.js file is the entry point to the react application, and that runs first. It's this file's Job to take up component and render it to the DOM.
++ Once JSX compiles, we have a JavaScript tree like representation.
++ React uses *Virtual DOM* when updating our template.
