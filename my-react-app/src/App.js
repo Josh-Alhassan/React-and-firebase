@@ -20,9 +20,9 @@ function App() {
       <h1>Build web apps with React</h1>
       <p>My name is {name}</p>
       <button onClick={handleClick}>Change name</button>
-      {events.map((event) => (
+      {events.map((event, index) => (
         <div key={event.id}>
-          <h2>{event.title}</h2>
+          <h2>{index} - {event.title}</h2>
         </div>
       ))}
     </div>
