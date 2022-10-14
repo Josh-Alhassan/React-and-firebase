@@ -52,3 +52,6 @@ import {useState} from 'react'
 **NOTE:** Whenever your state update, depends on the previous state that we're updating.
 
 Always use a callback function to access the previous state.
+
+### 22. Conditional Template
+We can use state to conditionally putput parts of a template based on that state
