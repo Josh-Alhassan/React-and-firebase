@@ -47,3 +47,8 @@ import {useState} from 'react'
 ### 20. Outputting List
 + You can use a *use State* as many times as you want a react app.
 + A key prop is something React can use to keep track of template items in some kind of Array
+
+### 21. Using the Previous State
+**NOTE:** Whenever your state update, depends on the previous state that we're updating.
+
+Always use a callback function to access the previous state.
