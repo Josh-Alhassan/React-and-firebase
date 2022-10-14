@@ -55,3 +55,20 @@ Always use a callback function to access the previous state.
 
 ### 22. Conditional Template
 We can use state to conditionally putput parts of a template based on that state
+
+### 23. useState Limitations
++ You can only call hooks from the top level of a component. So for instance, we couldn't use hook inside of a handle click function.
++ A react hook has to be used within the scope of a react component
+```
+useState() // not allowed
+
+function App() {
+    // code goes here
+    
+    return (
+        <div>
+            // JSX code goes here
+        </div>
+    )
+}
+```
