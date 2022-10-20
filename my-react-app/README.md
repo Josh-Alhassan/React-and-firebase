@@ -143,3 +143,24 @@ We can use props in the longer version of *React fragment*
     // JSX code goes here
 </React.Fragment>
 ```
+
+### 28. Children Props (Making a modal component)
+This is another way to pass props instead of the regular way.
+
+```
+export default function Modal( {children} ) {
+  return (
+    <div className="modal-backdrop">
+        <div className="modal">
+            {children}
+        </div>
+    </div>
+  )
+}
+
+// App.js Component
+<Modal>
+    <h2>10% OFF Coupon Code!!</h2>
+    <p>Use the code NINJA10 at the checkout.</p>
+</Modal>
+```
