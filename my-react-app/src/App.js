@@ -5,7 +5,7 @@ import Title from './components/Title';
 import Modal from './components/Modal';
 
 function App() {
-  const [showModal, setShowModal] = useState(true)
+  const [showModal, setShowModal] = useState(false)
   const [showEvents, setShowEvents] = useState(true);
   const [events, setEvents] = useState([
     {title: "Joshua's Birthday celebrated", id: 1},
@@ -57,8 +57,10 @@ function App() {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        {/* <a href='#'>Find out more</a> */}
       </Modal>}
+        <div>
+          <button onClick={() => setShowModal(true)} >Open</button>
+        </div>
     </div>
   );
 }

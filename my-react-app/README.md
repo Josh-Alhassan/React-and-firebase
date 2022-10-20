@@ -165,7 +165,7 @@ export default function Modal( {children} ) {
 </Modal>
 ```
 
-29. Function as props
+### 29. Function as props
 ```
 export default function Modal( {children, handleClose} ) {
   return (
@@ -178,3 +178,6 @@ export default function Modal( {children, handleClose} ) {
   )
 }
 ```
+
+### 30. Show Modal Challenge
+You want to make a button in the app component when you first load the page in the browser, which when usre clicks, will make the *show modal* show or display.
