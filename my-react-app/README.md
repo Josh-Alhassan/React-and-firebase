@@ -107,7 +107,7 @@ Props makes our component content re-usable and dynamic because then you can use
 
 The way we put a *prop* into a component is just by making an attribute on our custom component.
 
-<code> <Title title="Events in your Area" / > </code>
+<code> <Title title="Events in your Area" /> </code>
 
 When we pass a prop into a component, that component automatically recieves a prop object as a parameter in the function.
 
@@ -124,3 +124,22 @@ function Title(props) {
 
 we can also destructure prop object.
 <code> function Title({title, subtitle}) { // code goes here} </code>
+
+### 27. React Fragment
+React template must have a single parent element, else we get an error
+
+*React fragment* is basically just like an empty tag. <code> <> // code here </> </code>
+
+We can't use props or attributes on a short hand version of fragment.
+```
+<>
+// JSX code goes here
+</>
+```
+
+We can use props in the longer version of *React fragment*
+```
+<React.Fragment key={}>
+    // JSX code goes here
+</React.Fragment>
+```

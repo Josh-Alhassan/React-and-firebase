@@ -1,7 +1,8 @@
 import './App.css';
-import { useState } from 'react'
+import react, { useState } from 'react'
 
 import Title from './components/Title';
+import React from 'react';
 
 function App() {
   const [showEvents, setShowEvents] = useState(true);
@@ -36,10 +37,10 @@ function App() {
       }
       <h1>Build web apps with React</h1>
       {showEvents && events.map((event, index) => (
-        <div key={event.id}>
+        <React.Fragment key={event.id}>
           <h2>{index} - {event.title}</h2>
           <button onClick={() => handleClick(event.id)}>Delete event</button>
-        </div>
+        </React.Fragment>
       ))}
     </div>
   );
