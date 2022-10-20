@@ -75,9 +75,25 @@ function App() {
 
 ## SECTION 5 Components and Props
 
-### Using Multiple Components
+### 24. Using Multiple Components
 When creating a full website, you will need more than one component, where weach component would be responsible for each section of the site.
 
 The way we work with components on a page is by nesting them inside the app components. And when we nest components, we form what looks like a *component tree diagram form*.
 
 *props* is a way for a parent component to pass data down to one of its child components.
+
+### 25. Creating a Title Component
+<code>export default function Title() </code> 
+
+is the same as
+
+```
+function Title() {}
+
+export default Title;
+```
+
+To nest a component inside the APP component we are going to first *import* it.
+<code> import Title from './components/Title' </code>
+
+You can't hace multiple JSX or root parent element in a component.
