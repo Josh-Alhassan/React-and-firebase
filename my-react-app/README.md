@@ -97,3 +97,30 @@ To nest a component inside the APP component we are going to first *import* it.
 <code> import Title from './components/Title' </code>
 
 You can't hace multiple JSX or root parent element in a component.
+
+### 26. Intro to Props
+Props are a way in react first to pass data from a parent component down to a child component, so that it can be used in that child's component.
+
+That props could be any kind of data. It could be strings, number, boolean, array, objects etc.
+
+Props makes our component content re-usable and dynamic because then you can use it in different parts of the application and put different content into it. In this our case 'Title' component.
+
+The way we put a *prop* into a component is just by making an attribute on our custom component.
+
+<code> <Title title="Events in your Area" / > </code>
+
+When we pass a prop into a component, that component automatically recieves a prop object as a parameter in the function.
+
+```
+function Title(props) {
+    return (
+        <div>
+            <h1> {props.title} </h1>
+            <h2> {props.subtitle} </h2>
+        </div>
+    )
+}
+```
+
+we can also destructure prop object.
+<code> function Title({title, subtitle}) { // code goes here} </code>
