@@ -164,3 +164,17 @@ export default function Modal( {children} ) {
     <p>Use the code NINJA10 at the checkout.</p>
 </Modal>
 ```
+
+29. Function as props
+```
+export default function Modal( {children, handleClose} ) {
+  return (
+    <div className="modal-backdrop">
+        <div className="modal">
+            {children}
+            <button onClick={handleClose}> close </button>
+        </div>
+    </div>
+  )
+}
+```
