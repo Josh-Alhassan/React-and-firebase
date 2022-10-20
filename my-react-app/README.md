@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Build Web Apps with React & Firebase
+## Introduction and Setup
+### React at a Glance
+React is a JavaScript library that can be used in several ways: plug it into an existing website to control specific section, to power and control an entire web application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
++ React websites are built using ***components***
++ Single page apps (SPA) are built using React
 
-## Available Scripts
+### What you should Already know
+- JavaScript: import and export, Arrow functions, Array methods like .map() and .filter(), Aysnc & await, The fetch API & promises..
+- HTML and CSS
 
-In the project directory, you can run:
+### Environment Setup
+- React uses node.js under the hood to compile our project.
 
-### `npm start`
+## React Basics
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 4. Intro to State and useState
+### Why we need state!
++ **State** is basically another word for component data that might change over time.
++ When a react app first starts before a component template is even mounted to the DOM, React runs the component function.
 
-### `npm test`
+### Using the useState hook
++ *"useState"* is what is known as a "*react hook*". 
++ We can use many *react hook* for different purposes.
++ All *react hooks* are just functions that do something special. And all react hooks start with the word "***use***". That is how we know a function is a react hook.
++ The *useState* is used for creating component state that is component data which can change over time, or in reaction to something.
++ When we use "hook" to create state, whenever that state value changes, it triggers our component to be re-evaluated with the new state value.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+// Importing useState hook
+import {useState} from 'react'
+```
 
-### `npm run build`
++ As an argument in a useState hook <code>useState('')</code>, we pass it a value, whatever we want our state value to be. It can be any datatype.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
++ <code>useState('')</code> function returns Two Values for us inside an array and we can use what is known as *"Destructuring"* to grab the returned values.
+1. The actual state value.
+2. A function to change that state value.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How state and Rendering work
++ The index.js file is the entry point to the react application, and that runs first. It's this file's Job to take up component and render it to the DOM.
++ Once JSX compiles, we have a JavaScript tree like representation.
++ React uses *Virtual DOM* when updating our template.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 20. Outputting List
++ You can use a *use State* as many times as you want a react app.
++ A key prop is something React can use to keep track of template items in some kind of Array
 
-### `npm run eject`
+### 21. Using the Previous State
+**NOTE:** Whenever your state update, depends on the previous state that we're updating.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Always use a callback function to access the previous state.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 22. Conditional Template
+We can use state to conditionally putput parts of a template based on that state
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 23. useState Limitations
++ You can only call hooks from the top level of a component. So for instance, we couldn't use hook inside of a handle click function.
++ A react hook has to be used within the scope of a react component
+```
+useState() // not allowed
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+function App() {
+    // code goes here
+    
+    return (
+        <div>
+            // JSX code goes here
+        </div>
+    )
+}
+```
 
-## Learn More
+## SECTION 5 Components and Props
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Using Multiple Components
+When creating a full website, you will need more than one component, where weach component would be responsible for each section of the site.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The way we work with components on a page is by nesting them inside the app components. And when we nest components, we form what looks like a *component tree diagram form*.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*props* is a way for a parent component to pass data down to one of its child components.

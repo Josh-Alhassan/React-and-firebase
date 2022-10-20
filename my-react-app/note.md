@@ -72,3 +72,12 @@ function App() {
     )
 }
 ```
+
+## SECTION 5 Components and Props
+
+### Using Multiple Components
+When creating a full website, you will need more than one component, where weach component would be responsible for each section of the site.
+
+The way we work with components on a page is by nesting them inside the app components. And when we nest components, we form what looks like a *component tree diagram form*.
+
+*props* is a way for a parent component to pass data down to one of its child components.
