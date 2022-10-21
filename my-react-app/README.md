@@ -198,3 +198,34 @@ export default function Modal() {
     ), document.body)
 }
 ```
+
+### 33. Class Component Overview
+A class component in React are slightly older ways of creating component.
+
+A class component is a javaScript class, and it extends a React component class, which contains component functionality.
+
+In a class component, we use a render method inside the class and it's that render method that needs to return the template.
+
+In class component, we access the *props* by saying <code>this.props</code>, where the *"this"* keyword represents the component itself.
+
+We use a constructor function in class component and set the initial state using <code>this.state</code> which is an object of state properties.
+
+```
+class Clock extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            date: new Date()
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Hello, {this.props.name} </h1>
+                <h2> It is {this.state.date.toLocaleTimeString()}. </h2>
+            </div>
+        );
+    }
+}
+```
