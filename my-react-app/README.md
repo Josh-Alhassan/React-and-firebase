@@ -181,3 +181,20 @@ export default function Modal( {children, handleClose} ) {
 
 ### 30. Show Modal Challenge
 You want to make a button in the app component when you first load the page in the browser, which when usre clicks, will make the *show modal* show or display.
+
+### 31. Portals
+Portal in React is a way for us to take a component and render it somewhere else in the DOM outside the scope of its parent component.
+
+The <code>.createPortal()</code> is a method that takes two arguements:
++ The first argument is going to be all the JSX template (because that's the thing we want to pick up and move).
++ Second argument is where in the body we want to put the template.
+
+```
+export default function Modal() {
+    return ReactDOM.createPortal((
+        <>
+            // JSX template
+        </>
+    ), document.body)
+}
+```
