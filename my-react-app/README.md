@@ -229,3 +229,13 @@ class Clock extends React.Component {
     }
 }
 ```
+
+## Section 6: Styling React Application
+### 34. Using Global Style Sheet
+Global styles are styles that are site wide and they target common elements that we use all over the site. Example, heading styles, paragraph styles, button styles, any other generic style.
+
+In React, our global stylesheet is the <code>index.css</code>. The styles in the global stylesheet will affect all targeted elements wherever they are on the site or app.
+
+In order to register a global stylesheet, they have to be registered in the <code>index.js</code> file which kick starts our React app.
+
+### 35. Component Stylesheet
