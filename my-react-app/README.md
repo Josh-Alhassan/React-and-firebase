@@ -270,3 +270,8 @@ DIFFERENCES
 
 ## Section 7: User Input and Events
 ### Forms and Labels in React
+
+### The onchange Event
+It would be nice for us to able to track when a user changes the value of inputs eg. when we select a date, and when we type into the text field.
+
+The *onChange* event can file an event handler function whenever the value inside an input field changes.
