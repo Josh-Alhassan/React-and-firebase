@@ -256,3 +256,14 @@ the benefits of splittig css into different files is that as the app get bigger 
 
 ### 37. Dynamic Inline Styles
 <code> borderColor: isSalesModal ? "#FF4500" : "#555", </code>
+
+### 39. CSS Modules
+CSS modules are ways we can add specific component styles sheets with a couple of big differences like what we've had before.
+
+DIFFERENCES
+
++ CSS modules automatically scope your CSS rules to only apply to element in a specific component unlike *component style* that applies style globally.
+
++ Whenever you use a module CSS, the extension will be <code>fileStyle.module.css</code>
+
++ The way we import modules is different from how we import regular CSS.
