@@ -244,3 +244,12 @@ component stylesheets are styles that are specific to a certain component.
 the benefits of splittig css into different files is that as the app get bigger and when starting to style more and more elements, it helps to keep our css more modular, cleaner, and easier to update.
 
 **Note:** *Component specific stylesheets are also global. But the way aroind this, is to add a root calss to the parent element of each component template and then use that root class in our css files.*
+
+### 36. Inline Styles
+```
+<div className = "modal" style={{
+    border: "4px solid",
+    broderColor: "FF4500",
+    textAlign: "center"
+}}>
+```
