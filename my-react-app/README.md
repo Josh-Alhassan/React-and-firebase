@@ -249,7 +249,10 @@ the benefits of splittig css into different files is that as the app get bigger 
 ```
 <div className = "modal" style={{
     border: "4px solid",
-    broderColor: "FF4500",
+    broderColor: "#FF4500",
     textAlign: "center"
 }}>
 ```
+
+### 37. Dynamic Inline Styles
+<code> borderColor: isSalesModal ? "#FF4500" : "#555", </code>
