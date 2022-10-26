@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import Title from './components/Title';
 import Modal from './components/Modal';
 
+import NewEventForm from './components/NewEventForm';
+
 function App() {
   const [showModal, setShowModal] = useState(false)
   const [showEvents, setShowEvents] = useState(true);
@@ -53,13 +55,10 @@ function App() {
         <p>Use the code NINJA10 at the checkout.</p>
       </Modal> */}
       {showModal && <Modal handleClose={handleClose} isSalesModal={true}>
-        <h2>Terms and Conditions</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <NewEventForm />
       </Modal>}
         <div>
-          <button onClick={() => setShowModal(true)} >Open</button>
+          <button onClick={() => setShowModal(true)} >Add New Event</button>
         </div>
     </div>
   );

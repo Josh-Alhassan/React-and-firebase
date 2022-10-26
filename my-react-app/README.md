@@ -267,3 +267,6 @@ DIFFERENCES
 + Whenever you use a module CSS, the extension will be <code>fileStyle.module.css</code>
 
 + The way we import modules is different from how we import regular CSS.
+
+## Section 7: User Input and Events
+### Forms and Labels in React
