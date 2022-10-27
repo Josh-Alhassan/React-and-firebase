@@ -275,3 +275,10 @@ DIFFERENCES
 It would be nice for us to able to track when a user changes the value of inputs eg. when we select a date, and when we type into the text field.
 
 The *onChange* event can file an event handler function whenever the value inside an input field changes.
+
+### Using useRef hook
+Refs are a way for us to get a reference toa raw dom element directly. Much like in vanila JavaScript, we can use querySelector to get access to elements
+
+The way we use *refs* is by using a *react hook* called *useRef*.
+
+Typically we would use "states" in an unchanged events instead of refs because it's more in line with what React is designed for.
